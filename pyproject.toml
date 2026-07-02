@@ -17,11 +17,23 @@ dependencies = [
 
 [project.optional-dependencies]
 tokenizers = ["tiktoken>=0.7"]
+
+[dependency-groups]
 dev = [
     "pytest>=8.2",
     "pytest-cov>=5.0",
     "ruff>=0.6",
 ]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu128", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -36,4 +48,3 @@ target-version = "py311"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
-
