@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+
+# Training artifacts (keep experiments reproducible, not checkpoints in Git)
+data/**
+!data/.gitkeep
+out/
+checkpoints/
+wandb/
+*.pt
+*.pth
+*.bin
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local secrets
+.env
+*.local
+
