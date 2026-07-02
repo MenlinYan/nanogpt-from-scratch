@@ -2,7 +2,7 @@
 
 | 阶段 | 状态 | 证据 |
 |---|---|---|
-| Phase 0：仓库与工程准备 | 进行中 | 本地提交；uv/CUDA 环境已验证，待推送远程 |
+| Phase 0：仓库与工程准备 | 已完成 | uv/CUDA 验证通过；GitHub `main` 已推送 |
 | Phase 1：数据与 bigram baseline | 未开始 | 测试、loss、样例生成 |
 | Phase 2：attention 与 block | 未开始 | mask/shape/对齐测试 |
 | Phase 3：GPT 与训练闭环 | 未开始 | checkpoint、曲线、生成 |
